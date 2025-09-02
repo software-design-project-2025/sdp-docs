@@ -17,12 +17,18 @@ export default defineConfig({
 						{ label: 'Meeting 1', slug: 'correspondence/sprint-1-meeting-1' },
 						{ label: 'Meeting 2', slug: 'correspondence/sprint-1-meeting-2' },
 						{ label: 'Meeting 3', slug: 'correspondence/sprint-1-meeting-3' },
+                        {label: 'Meeting 4', slug: 'correspondence/sprint-1-meeting-4' },
+                        {label: 'Meeting 5', slug: 'correspondence/sprint-1-meeting-5'}
 					],
 				},
 				{
 					label: 'Sprint 2 Correspondence',
 					items: [
-						
+                        { label: 'Meeting 1', slug: 'correspondence/sprint-2-meeting-1' },
+                        { label: 'Meeting 2', slug: 'correspondence/sprint-2-meeting-2' },
+                        { label: 'Meeting 3', slug: 'correspondence/sprint-2-meeting-3' },
+                        { label: 'Meeting 4', slug: 'correspondence/sprint-2-meeting-4' },
+                        { label: 'Meeting 5', slug: 'correspondence/sprint-2-meeting-5' }
 					],
 				},
 				{
@@ -38,10 +44,11 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'In case you are curious',
+					label: 'Important Information',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Technology Stack', slug: 'tech-stack/why-tech-stack' },
+                        {label: 'About our database', slug: 'database/schema'}
 					],
 				},
 
