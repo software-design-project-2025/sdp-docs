@@ -46,9 +46,10 @@ export default defineConfig({
 				{
 					label: 'Important Information',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Technology Stack', slug: 'tech-stack/why-tech-stack' },
-                        {label: 'About our database', slug: 'database/schema'}
+                        {label: 'About our database', slug: 'database/schema'},
+                        {label: 'Testing', slug: 'testing/testing'},
+                        {label: 'Bug Report', slug: 'bugs/bugs'}
 					],
 				},
 
