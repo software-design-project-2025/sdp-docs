@@ -34,6 +34,11 @@ export default defineConfig({
 				{
 					label: 'Sprint 3 Correspondence',
 					items: [
+                        { label: 'Meeting 1', slug: 'correspondence/sprint-3-meeting-1' },
+                        { label: 'Meeting 2', slug: 'correspondence/sprint-3-meeting-2' },
+                        { label: 'Meeting 3', slug: 'correspondence/sprint-3-meeting-3' },
+                        { label: 'Meeting 4', slug: 'correspondence/sprint-3-meeting-4' },
+                        { label: 'Meeting 5', slug: 'correspondence/sprint-3-meeting-5' }
 						
 					],
 				},
