@@ -54,6 +54,7 @@ export default defineConfig({
 						{ label: 'Technology Stack', slug: 'tech-stack/why-tech-stack' },
                         {label: 'About our database', slug: 'database/schema'},
                         {label: 'Testing', slug: 'testing/testing'},
+                        {label: 'Security Audit', slug: 'security/audit'},
                         {label: 'Bug Report', slug: 'bugs/bugs'}
 					],
 				},
