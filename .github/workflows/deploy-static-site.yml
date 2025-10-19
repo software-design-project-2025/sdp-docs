@@ -1,0 +1,55 @@
+# Name of your workflow
+name: Deploy Astro Site to Azure Storage
+
+# This action runs on every push to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+# The jobs to run
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest # Use a standard 'runner' machine
+    
+    steps:
+      # 1. Check out your code from the repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js (Astro needs this)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23.6 # Use a current Node.js version
+          cache: 'npm' # Speed up future builds
+
+      # 3. Install your project's dependencies
+      - name: Install dependencies
+        run: npm ci # 'ci' is faster and more reliable for pipelines
+
+      # 4. Build your Astro site (creates the 'dist' folder)
+      - name: Build Astro site
+        run: npm run build
+
+      # 5. Log in to Azure using the secret you created
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 6. Upload the 'dist' folder contents to the '$web' container
+      - name: Deploy to $web container
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name studylink \
+              --auth-mode login \
+              --destination '$web' \
+              --source ./dist \
+              --overwrite
+              
+      # 7. (Optional) Log out of Azure
+      - name: Logout of Azure
+        run: az logout
