@@ -10,7 +10,16 @@ export default defineConfig({
 			logo: { src: './public/logo.png' },
 			
 			sidebar: [
-				
+                {
+                    label: 'Important Information',
+                    items: [
+                        { label: 'Technology Stack', slug: 'tech-stack/why-tech-stack' },
+                        {label: 'About our database', slug: 'database/schema'},
+                        {label: 'Testing', slug: 'testing/testing'},
+                        {label: 'Security Audit', slug: 'security/audit'},
+                        {label: 'Bug Report', slug: 'bugs/bugs'}
+                    ],
+                },
 				{
 					label: 'Sprint 1 Correspondence',
 					items: [
@@ -38,26 +47,22 @@ export default defineConfig({
                         { label: 'Meeting 2', slug: 'correspondence/sprint-3-meeting-2' },
                         { label: 'Meeting 3', slug: 'correspondence/sprint-3-meeting-3' },
                         { label: 'Meeting 4', slug: 'correspondence/sprint-3-meeting-4' },
-                        { label: 'Meeting 5', slug: 'correspondence/sprint-3-meeting-5' }
-						
+                        { label: 'Meeting 5', slug: 'correspondence/sprint-3-meeting-5' },
+                        { label: 'Meeting 6', slug: 'correspondence/sprint-3-meeting-6' },
+                        { label: 'Meeting 7', slug: 'correspondence/sprint-3-meeting-7' }
 					],
 				},
 				{
 					label: 'Sprint 4 Correspondence',
 					items: [
-						
+                        { label: 'Meeting 1', slug: 'correspondence/sprint-4-meeting-1' },
+                        { label: 'Meeting 2', slug: 'correspondence/sprint-4-meeting-2' },
+                        { label: 'Meeting 3', slug: 'correspondence/sprint-4-meeting-3' },
+                        { label: 'Meeting 4', slug: 'correspondence/sprint-4-meeting-4' },
+                        { label: 'Meeting 5', slug: 'correspondence/sprint-4-meeting-5' }
 					],
 				},
-				{
-					label: 'Important Information',
-					items: [
-						{ label: 'Technology Stack', slug: 'tech-stack/why-tech-stack' },
-                        {label: 'About our database', slug: 'database/schema'},
-                        {label: 'Testing', slug: 'testing/testing'},
-                        {label: 'Security Audit', slug: 'security/audit'},
-                        {label: 'Bug Report', slug: 'bugs/bugs'}
-					],
-				},
+
 
 			],
 		}),
