@@ -3,7 +3,10 @@ title: Database Schema
 description: The structure of our system data... or at least, how we have planned it to be.
 ---
 
-Below is the tables that make up our database, as will be used by the final production build of our system. An updated ERD will be made available here for better visualization.
+Below are the SQL commands that have been used to generate the tables that make up our database in its production-ready form. An ERD is also available for better visualization. Feel free to view it below.
+
+[StudyLink Database Schema](/Database.pdf)
+
 ##### SECTION 1: Independent Tables
 
 - Table: faculty
@@ -147,4 +150,14 @@ chatid INT REFERENCES chat(chatid) ON DELETE CASCADE,
 sent_datetime TIMESTAMP NOT NULL,
 senderid TEXT REFERENCES "user"(userid) ON DELETE SET NULL,
 doc VARCHAR(255) NOT NULL
+);
+
+
+- Table: group_join_request
+CREATE TABLE group_join_request (
+requestid SERIAL PRIMARY KEY,
+groupid INT REFERENCES "group"(groupid) ON DELETE CASCADE,
+userid TEXT REFERENCES "user"(userid) ON DELETE CASCADE,
+request_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+status VARCHAR(20) DEFAULT 'pending' -- e.g., 'pending', 'approved', 'rejected'
 );
